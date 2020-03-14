@@ -1,0 +1,30 @@
+{% load static %}
+<section id="features" class="section" data-stellar-background-ratio="0.2">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Nossas especialidades</h2>
+          <hr class="lines">
+          <p class="section-subtitle">Comtamos com uma serie de serviços premiuns! <br> Visando a satisfação e sucesso de nossos clientes.</p>
+        </div>
+        <div class="row">
+          <div class="col-lg-8 col-md-12 col-xs-12">
+            <div class="container">
+              <div class="row">
+                 {% for f in features %}
+                  <div class="col-lg-6 col-sm-6 col-xs-12 box-item">
+                    <span class="icon">
+                      <i class="{{ f.icone }}"></i>
+                    </span>
+                    <div class="text">
+                      <h4>{{ f.title }}</h4>
+                      <p>{{ f.texto }}</p>
+                    </div>
+                  </div>
+                  {% endfor %}
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>

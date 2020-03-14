@@ -1,0 +1,15 @@
+venv
+staticfiles
+.vscode
+.idea
+*.*~
+
+Scripts
+
+pyvenv.cfg
+
+__pycache__
+
+.pyc
+
+Lib
