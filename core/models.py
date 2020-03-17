@@ -1,11 +1,8 @@
 from django.db import models
 from stdimage.models import StdImageField
-import uuid
 
 
 def get_file_path(_instance, filename):
-    ext = filename.split('.')[-1]
-    filename = f'{uuid.uuid4()}.{ext}'
     return filename
 
 
@@ -44,12 +41,10 @@ class Funcionario(Base):
     imagem = StdImageField(
         'Imagem',
         upload_to=get_file_path,
-        variations={'thumb': {'width': 480, 'height': 480, 'crop': True}}
     )
     facebook_icon = models.CharField('Facebook', max_length=50, choices=ICONES_CHOICES, default='')
     twitter_icone = models.CharField('Twitter', max_length=50, choices=ICONES_CHOICES, default='')
     linkedin_icone = models.CharField('Linkedin', max_length=50, choices=ICONES_CHOICES, default='')
-
     class Meta:
         verbose_name = 'Funcionário'
         verbose_name_plural = 'Funcionários'
@@ -87,10 +82,9 @@ class Features(Base):
 class Publicacoes(Base):
     title = models.CharField('Titulo', max_length=100)
     sub_title = models.CharField('Subtitulo', max_length=500)
-    imagem_publicacao = StdImageField(
+    imagem = StdImageField(
         name='Imagem',
         upload_to=get_file_path,
-        variations={'thumb': {'width': 480, 'height': 480, 'crop': True}}
     )
     text = models.TextField('Texto', max_length=4000)
 
