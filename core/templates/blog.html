@@ -3,9 +3,8 @@
       <!-- Container Starts -->
       <div class="container">
         <div class="section-header">
-          <h2 class="section-title">Nosso Blog</h2>
+          <h2 class="section-title">Blog</h2>
           <hr class="lines">
-          <p class="section-subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, dignissimos! <br> Lorem ipsum dolor sit amet, consectetur.</p>
         </div>
         <div class="row">
             {% for p in publicacao %}
@@ -18,10 +17,6 @@
                 </a>
               </div>
               <div class="blog-item-text">
-                <div class="meta-tags">
-                  <span class="date"><i class="lnr  lnr-clock"></i>2 Days Ago</span>
-                  <span class="comments"><a href="#"><i class="lnr lnr-bubble"></i> 24 Comments</a></span>
-                </div>
                 <h3>
                   <a href="{% url 'single_page' p.pk %}">{{ p.title }}</a>
                 </h3>

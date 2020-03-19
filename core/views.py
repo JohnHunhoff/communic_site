@@ -1,6 +1,6 @@
 from django.views.generic import FormView, TemplateView
 from django.urls import reverse_lazy
-from .models import Features, Services, Publicacoes
+from .models import Features, Services, Publicacoes, Funcionario, Clientes, Counter
 from django.contrib import messages
 from .forms import ContatoForm
 
@@ -14,7 +14,10 @@ class IndexView(FormView):
         context = super(IndexView, self).get_context_data(**kwargs)
         context['features'] = Features.objects.all()
         context['services'] = Services.objects.all()
-        context['publicacao'] = reversed(Publicacoes.objects.all())        
+        context['publicacao'] = reversed(Publicacoes.objects.all())
+        context['funcionario'] = Funcionario.objects.all()
+        context['clientes'] = Clientes.objects.all()
+        context['counter'] = Counter.objects.all()
         return context
 
     def form_valid(self, form, *args, **kwargs):
@@ -23,12 +26,7 @@ class IndexView(FormView):
         return super(IndexView, self).form_valid(form, *args, **kwargs)
 
     def form_invalid(self, form, *args, **kwargs):
-        print(form)
-        print(args)
-        print(kwargs)
-        print(form.__dict__)
-
-        messages.error(self.request, 'Erro ao enviar mensagem')
+        messages.error(self.request, 'Erro ao enviar mensagem!')
         return super(IndexView, self).form_invalid(form, *args, **kwargs)
     
 
@@ -39,4 +37,3 @@ class SingleView(TemplateView):
         context = super(SingleView, self).get_context_data(**kwargs)
         context['publicacao'] = Publicacoes.objects.get(id=pk)
         return context
-

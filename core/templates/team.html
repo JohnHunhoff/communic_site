@@ -2,79 +2,29 @@
 <section id="team" class="section">
       <div class="container">
         <div class="section-header">
-          <h2 class="section-title">Nosso time</h2>
+          <h2 class="section-title">Equipe</h2>
           <hr class="lines">
-          <p class="section-subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, dignissimos! <br> Lorem ipsum dolor sit amet, consectetur.</p>
+          <p class="section-subtitle"><br>Contamos com uma equipe de profissionais e colaboradores especializados</p>
         </div>
         <div class="row">
+           {% for f in funcionario %}
           <div class="col-lg-3 col-md-6 col-xs-12">
             <div class="single-team">
-              <img src="{% static 'img/team/team1.jpg' %}" alt="">
+              <img src="{{ f.imagem.url }}" alt="">
               <div class="team-details">
                 <div class="team-inner">
-                  <h4 class="team-title">Jhon Doe</h4>
-                  <p>Chief Technical Officer</p>
+                  <h4 class="team-title">{{ f.nome }}</h4>
+                  <p>{{ f.cargo }}</p>
                   <ul class="social-list">
-                    <li class="facebook"><a href="#"><i class="fa fa-facebook"></i></a></li>
-                    <li class="twitter"><a href="#"><i class="fa fa-twitter"></i></a></li>
-                    <li class="google-plus"><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                    <li class="linkedin"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                    <li><a href="{{ f.social_link_1 }}"><i class="{{ f.social_icon_1 }}"></i></a></li>
+                    <li><a href="{{ f.social_link_2 }}"><i class="{{ f.social_icon_2 }}"></i></a></li>
+                    <li><a href="{{ f.social_link_3 }}"><i class="{{ f.social_icon_3 }}"></i></a></li>
                   </ul>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col-lg-3 col-md-6 col-xs-12">
-            <div class="single-team">
-              <img src="{% static 'img/team/team2.jpg' %}" alt="">
-              <div class="team-details">
-                <div class="team-inner">
-                  <h4 class="team-title">Paul Kowalsy</h4>
-                  <p>CEO & Co-Founder</p>
-                  <ul class="social-list">
-                    <li class="facebook"><a href="#"><i class="fa fa-facebook"></i></a></li>
-                    <li class="twitter"><a href="#"><i class="fa fa-twitter"></i></a></li>
-                    <li class="google-plus"><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                    <li class="linkedin"><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 col-xs-12">
-            <div class="single-team">
-              <img src="{% static 'img/team/team3.jpg' %}" alt="">
-              <div class="team-details">
-                <div class="team-inner">
-                  <h4 class="team-title">Emilly Williams</h4>
-                  <p>Business Manager</p>
-                  <ul class="social-list">
-                    <li class="facebook"><a href="#"><i class="fa fa-facebook"></i></a></li>
-                    <li class="twitter"><a href="#"><i class="fa fa-twitter"></i></a></li>
-                    <li class="google-plus"><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                    <li class="linkedin"><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 col-xs-12">
-            <div class="single-team">
-              <img class="img-fulid" src="{% static 'img/team/team4.jpg' %}" alt="">
-              <div class="team-details">
-                <div class="team-inner">
-                  <h4 class="team-title">Patricia Green</h4>
-                  <p>Graphic Designer</p>
-                  <ul class="social-list">
-                    <li class="facebook"><a href="#"><i class="fa fa-facebook"></i></a></li>
-                    <li class="twitter"><a href="#"><i class="fa fa-twitter"></i></a></li>
-                    <li class="google-plus"><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                    <li class="linkedin"><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
+          {% endfor %}
         </div>
       </div>
     </section>

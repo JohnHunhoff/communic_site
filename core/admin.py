@@ -4,8 +4,9 @@ from .models import \
     Cargo, \
     Features, \
     Publicacoes, \
-    Services
-
+    Services, \
+    Clientes, \
+    Counter
 
 
 @admin.register(Features)
@@ -20,7 +21,7 @@ class CargoAdmin(admin.ModelAdmin):
 
 @admin.register(Funcionario)
 class FuncionarioAdmin(admin.ModelAdmin):
-    list_display = ('nome', 'cargo', 'modificado')
+    list_display = ('nome', 'cargo', 'modificado',)
 
 
 @admin.register(Publicacoes)
@@ -32,4 +33,10 @@ class PublicacoesAdmin(admin.ModelAdmin):
 class ServicesAdmin(admin.ModelAdmin):
     list_display = ('title',)
 
+@admin.register(Clientes)
+class ClientesAdmin(admin.ModelAdmin):
+    list_display = ('nome',)
 
+@admin.register(Counter)
+class CounterAdmin(admin.ModelAdmin):
+    list_display = ('modificado',)

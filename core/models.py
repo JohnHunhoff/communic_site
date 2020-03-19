@@ -34,7 +34,8 @@ class Funcionario(Base):
         ('fa fa-facebook', 'Facebook'),
         ('fa fa-twitter', 'Twitter'),
         ('fa fa-linkedin', 'Linkedin'),
-        ('fa fa-instagram', 'Instagram')
+        ('fa fa-instagram', 'Instagram'),
+        ('fa fa-whatsapp', 'Whatsapp'),
     )
 
     nome = models.CharField('Nome', max_length=100)
@@ -43,9 +44,13 @@ class Funcionario(Base):
         'Imagem',
         upload_to=get_file_path,
     )
-    facebook_icon = models.CharField('Facebook', max_length=50, choices=ICONES_CHOICES, default='')
-    twitter_icone = models.CharField('Twitter', max_length=50, choices=ICONES_CHOICES, default='')
-    linkedin_icone = models.CharField('Linkedin', max_length=50, choices=ICONES_CHOICES, default='')
+    social_icon_1 = models.CharField('Icone 1', max_length=50, choices=ICONES_CHOICES, default='')
+    social_link_1 = models.CharField('Link 1', max_length=200, default='')
+    social_icon_2 = models.CharField('Icone 2', max_length=50, choices=ICONES_CHOICES, default='')
+    social_link_2 = models.CharField('Link 2', max_length=200, default='')
+    social_icon_3 = models.CharField('Icone 3', max_length=50, choices=ICONES_CHOICES, default='')
+    social_link_3 = models.CharField('Link 3', max_length=200, default='')
+
     class Meta:
         verbose_name = 'Funcionário'
         verbose_name_plural = 'Funcionários'
@@ -105,7 +110,7 @@ class Services(Base):
         ('lnr lnr-code', 'html'),
         ('lnr lnr-mustache', 'Emote: Bigode'),
         ('lnr lnr-chart-bars', 'Gráfico'),
-        ('lnr lnr-tablet', 'Tablete'),
+        ('lnr lnr-tablet', 'Tablet'),
         ('lnr lnr-earth', 'Planeta Terra'),
         ('lnr lnr-hourglass', 'Ampulheta(Relógio de areia)'),
         ('lnr lnr-rocket', 'Foguete'),
@@ -124,4 +129,39 @@ class Services(Base):
         return self.title
 
 
+class Clientes(Base):
+    nome = models.CharField('Cliente', max_length=200)
+    imagem = StdImageField('Imagem', upload_to=get_file_path)
 
+    class Meta:
+        verbose_name = 'Cliente'
+        verbose_name_plural = 'Clientes'
+
+    def __str__(self):
+        return self.nome
+
+
+class Counter(Base):
+
+    ICON_CHOICES = (
+        ('lnr lnr-briefcase', 'Maleta'),
+        ('lnr lnr-coffee-cup', 'Café'),
+        ('lnr lnr-users', 'Usuarios'),
+        ('lnr lnr-clock', 'Relógio'),
+        ('lnr lnr-heart', 'Coração'),
+        ('lnr lnr-chart-bars', 'Gráfico'),
+        ('lnr lnr-tablet', 'Tablet'),
+        ('lnr lnr-earth', 'Planeta Terra'),
+        ('lnr lnr-hourglass', 'Ampulheta(Relógio de areia)'),
+        ('lnr lnr-rocket', 'Foguete'),
+        ('lnr lnr-screen', 'Monitor')
+    )
+
+    icon = models.CharField('Icone', max_length=50, choices=ICON_CHOICES)
+    text = models.CharField('Título', max_length=80)
+
+    class Meta:
+        verbose_name = 'Contador'
+
+    def __str__(self):
+        return self.text
