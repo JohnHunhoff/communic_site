@@ -1,5 +1,11 @@
 from django.contrib import admin
-from .models import Funcionario, Cargo, Features, Publicacoes, Services
+from .models import \
+    Funcionario, \
+    Cargo, \
+    Features, \
+    Publicacoes, \
+    Services
+
 
 
 @admin.register(Features)
@@ -25,3 +31,5 @@ class PublicacoesAdmin(admin.ModelAdmin):
 @admin.register(Services)
 class ServicesAdmin(admin.ModelAdmin):
     list_display = ('title',)
+
+

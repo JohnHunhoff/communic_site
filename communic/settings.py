@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'core',
     'stdimage',
+    'ckeditor',
+    'ckeditor_uploader',
 ]
 
 MIDDLEWARE = [
@@ -125,4 +127,5 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 MEDIA_URL = '/media/'
 STATIC_URL = '/static/'
-
+CKEDITOR_UPLOAD_PATH = 'uploads/'
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'

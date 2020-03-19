@@ -1,5 +1,6 @@
 from django.db import models
 from stdimage.models import StdImageField
+from ckeditor_uploader.fields import RichTextUploadingField
 
 
 def get_file_path(_instance, filename):
@@ -81,12 +82,12 @@ class Features(Base):
 # blog features init
 class Publicacoes(Base):
     title = models.CharField('Titulo', max_length=100)
-    sub_title = models.CharField('Subtitulo', max_length=500)
+    sub_title = models.CharField('Resumo', max_length=500)
     imagem = StdImageField(
         name='Imagem',
         upload_to=get_file_path,
     )
-    text = models.TextField('Texto', max_length=4000)
+    text = RichTextUploadingField()
 
     class Meta:
         verbose_name = 'Publicação'
@@ -121,3 +122,6 @@ class Services(Base):
 
     def __str__(self):
         return self.title
+
+
+

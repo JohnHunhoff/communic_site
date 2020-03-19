@@ -5,48 +5,47 @@
           <div class="row">
             <div class="col-lg-6 col-sm-6 col-xs-12">
               <div class="contact-us">
-                <h3>Contact With us</h3>
+                <h3>Fale Conosco</h3>
                 <div class="contact-address">
-                  <p>Centerville Road, DE 19808, US </p>
                   <p class="phone">Phone: <span>(+94 123 456 789)</span></p>
                   <p class="email">E-mail: <span>(contact@mate.com)</span></p>
                 </div>
                 <div class="social-icons">
                   <ul>
                     <li class="facebook"><a href="#"><i class="fa fa-facebook"></i></a></li>
-                    <li class="twitter"><a href="#"><i class="fa fa-twitter"></i></a></li>
-                    <li class="google-plus"><a href="#"><i class="fa fa-google-plus"></i></a></li>
                     <li class="linkedin"><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                    <li class="dribbble"><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                    <li class="whatsapp"><a href="#"><i class="fa fa-whatsapp"></i></a></li>
+                    <li class="instagram"><a href="#"><i class="fa fa-instagram"></i></a></li>
                   </ul>
                 </div>
               </div>
             </div>
             <div class="col-lg-6 col-sm-6 col-xs-12">
               <div class="contact-block">
-                <form id="contactForm">
+                <form id="contato" method="post" action="{% url 'index' %}">
+                {% csrf_token %}
                   <div class="row">
                     <div class="col-md-12">
                       <div class="form-group">
-                        <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required data-error="Please enter your name">
+                        <input type="text" class="form-control" id="nome" name="nome" placeholder="nome" required data-error="Por Favor informe seu nome corretamente">
                         <div class="help-block with-errors"></div>
                       </div>
                     </div>
                     <div class="col-md-12">
                       <div class="form-group">
-                        <input type="text" placeholder="Your Email" id="email" class="form-control" name="name" required data-error="Please enter your email">
+                        <input type="text" placeholder="Email" id="email" class="form-control" name="email" required data-error="Por Favor insira seu Email">
                         <div class="help-block with-errors"></div>
                       </div>
                     </div>
                     <div class="col-md-12">
                       <div class="form-group">
-                        <textarea class="form-control" id="message" placeholder="Your Message" rows="8" data-error="Write your message" required></textarea>
+                        <textarea class="form-control" id="mensagem" name="mensagem" placeholder="Mensagem" rows="8" data-error="Escreva sua mensagem" required></textarea>
                         <div class="help-block with-errors"></div>
                       </div>
                       <div class="submit-button text-center">
                         <button class="btn btn-common" id="submit" type="submit">Enviar mensagem</button>
                         <div id="msgSubmit" class="h3 text-center hidden"></div>
-                        <div class="clearfix"></div>
+                       <div class="clearfix"></div>
                       </div>
                     </div>
                   </div>
