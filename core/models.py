@@ -68,7 +68,13 @@ class Features(Base):
         ('lnr lnr-layers', 'Layer'),
         ('lnr lnr-cog', 'Cog'),
         ('lnr lnr-magnifier', 'Lupa'),
-        ('lnr lnr-pencil', 'lápis')
+        ('lnr lnr-pencil', 'lápis'),
+        ('lnr lnr-code', 'html'),
+        ('lnr lnr-chart-bars', 'Gráfico'),
+        ('lnr lnr-tablet', 'Tablet'),
+        ('lnr lnr-earth', 'Planeta Terra'),
+        ('lnr lnr-hourglass', 'Ampulheta(Relógio de areia)'),
+        ('lnr lnr-screen', 'Monitor')
     )
 
     title = models.CharField('Titulo', max_length=100)
@@ -114,7 +120,18 @@ class Services(Base):
         ('lnr lnr-earth', 'Planeta Terra'),
         ('lnr lnr-hourglass', 'Ampulheta(Relógio de areia)'),
         ('lnr lnr-rocket', 'Foguete'),
-        ('lnr lnr-screen', 'Monitor')
+        ('lnr lnr-screen', 'Monitor'),
+        ('lnr lnr-laptop-phone', 'Laptop'),
+        ('lnr lnr-envelope', 'E-mail'),
+        ('lnr lnr-film-play', 'Video'),
+        ('lnr lnr-picture', 'Imagem'),
+        ('lnr lnr-store', 'Loja'),
+        ('lnr lnr-pie-chart', 'Gráfico circular'),
+        ('lnr lnr-smartphone', 'Celular'),
+        ('lnr lnr-cart', 'Carrinho de Supermercado'),
+        ('lnr lnr-camera-video', 'Camera de video'),
+        ('lnr lnr-bullhorn', 'Megafone'),
+        ('lnr lnr-thumbs-up', 'Positivo(joia)'),
     )
 
     title = models.CharField('Titulo', max_length=100)
@@ -159,9 +176,11 @@ class Counter(Base):
 
     icon = models.CharField('Icone', max_length=50, choices=ICON_CHOICES)
     text = models.CharField('Título', max_length=80)
+    number = models.IntegerField('Número', default=0)
 
     class Meta:
         verbose_name = 'Contador'
+        verbose_name_plural = 'Contadores'
 
     def __str__(self):
         return self.text
