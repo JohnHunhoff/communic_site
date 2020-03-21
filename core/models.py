@@ -74,7 +74,17 @@ class Features(Base):
         ('lnr lnr-tablet', 'Tablet'),
         ('lnr lnr-earth', 'Planeta Terra'),
         ('lnr lnr-hourglass', 'Ampulheta(Relógio de areia)'),
-        ('lnr lnr-screen', 'Monitor')
+        ('lnr lnr-screen', 'Monitor'),
+        ('lnr lnr-envelope', 'E-mail'),
+        ('lnr lnr-film-play', 'Video'),
+        ('lnr lnr-picture', 'Imagem'),
+        ('lnr lnr-store', 'Loja'),
+        ('lnr lnr-pie-chart', 'Gráfico circular'),
+        ('lnr lnr-smartphone', 'Celular'),
+        ('lnr lnr-cart', 'Carrinho de Supermercado'),
+        ('lnr lnr-camera-video', 'Camera de video'),
+        ('lnr lnr-bullhorn', 'Megafone'),
+        ('lnr lnr-thumbs-up', 'Positivo(joia)'),
     )
 
     title = models.CharField('Titulo', max_length=100)
@@ -122,16 +132,6 @@ class Services(Base):
         ('lnr lnr-rocket', 'Foguete'),
         ('lnr lnr-screen', 'Monitor'),
         ('lnr lnr-laptop-phone', 'Laptop'),
-        ('lnr lnr-envelope', 'E-mail'),
-        ('lnr lnr-film-play', 'Video'),
-        ('lnr lnr-picture', 'Imagem'),
-        ('lnr lnr-store', 'Loja'),
-        ('lnr lnr-pie-chart', 'Gráfico circular'),
-        ('lnr lnr-smartphone', 'Celular'),
-        ('lnr lnr-cart', 'Carrinho de Supermercado'),
-        ('lnr lnr-camera-video', 'Camera de video'),
-        ('lnr lnr-bullhorn', 'Megafone'),
-        ('lnr lnr-thumbs-up', 'Positivo(joia)'),
     )
 
     title = models.CharField('Titulo', max_length=100)
