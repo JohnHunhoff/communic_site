@@ -936,7 +936,7 @@ button:focus {
  10. Counter Section Style
  ========================================================================== */
 .counters {
-  background: url(../img/counter.jpg) fixed;
+  background: black fixed;
   position: relative;
 }
 
