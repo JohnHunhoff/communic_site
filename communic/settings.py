@@ -131,8 +131,8 @@ CKEDITOR_UPLOAD_PATH = 'uploads/'
 # EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 EMAIL_HOST = 'localhost'
-EMAIL_HOST_USER = 'no-reply@fusion.com.br'
+EMAIL_HOST_USER = 'no-reply@communic.com.br'
 EMAIL_PORT = 587
 EMAIL_USE_TSL = True
 EMAIL_HOST_PASSWORD = 'fusion'
-DEFAULT_FROM_EMAIL = 'contato@fusion.com.br'
+DEFAULT_FROM_EMAIL = 'communic.publicidade.marketing@gmail.com'
