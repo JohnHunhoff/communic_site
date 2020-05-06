@@ -138,5 +138,5 @@ EMAIL_HOST = 'localhost'
 EMAIL_HOST_USER = 'no-reply@communic.com.br'
 EMAIL_PORT = 587
 EMAIL_USE_TSL = True
-EMAIL_HOST_PASSWORD = 'fusion'
+EMAIL_HOST_PASSWORD = 'Pretinha@2020'
 DEFAULT_FROM_EMAIL = 'communic.publicidade.marketing@gmail.com'
