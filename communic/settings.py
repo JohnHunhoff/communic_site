@@ -25,7 +25,7 @@ SECRET_KEY = '0f=1t0%e!8rm(2qj=5yp0#&akm%p^i1kw$&w_2_2jf3r#tf2c6'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['31.220.56.184', 'communicmarketing.com.br', 'localhost']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
