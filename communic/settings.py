@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '0f=1t0%e!8rm(2qj=5yp0#&akm%p^i1kw$&w_2_2jf3r#tf2c6'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -134,9 +134,4 @@ STATIC_URL = '/static/'
 CKEDITOR_UPLOAD_PATH = 'uploads/'
 # EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
-EMAIL_HOST = 'localhost'
-EMAIL_HOST_USER = 'contato@communic.com.br'
-EMAIL_PORT = 587
-EMAIL_USE_TSL = True
-EMAIL_HOST_PASSWORD = 'Pretinha@2020'
-DEFAULT_FROM_EMAIL = 'communic.publicidade.marketing@gmail.com'
+

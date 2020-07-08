@@ -2,13 +2,11 @@ from django.views.generic import FormView, TemplateView
 from django.urls import reverse_lazy
 from .models import Features, Services, Publicacoes, Funcionario, Clientes, Counter
 from django.contrib import messages
-from .forms import ContatoForm
 
 
-class IndexView(FormView):
+
+class IndexView(TemplateView):
     template_name = 'index.html'
-    form_class = ContatoForm
-    success_url = reverse_lazy('index')
 
     def get_context_data(self, **kwargs):
         context = super(IndexView, self).get_context_data(**kwargs)

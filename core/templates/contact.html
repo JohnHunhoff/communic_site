@@ -8,7 +8,7 @@
                 <h3>Fale Conosco</h3>
                 <div class="contact-address">
                   <p class="phone">Telefone: <span>(62) 99918 7545</span></p>
-                  <p class="email">E-mail: <span>communic.publicidade.marketing@gmail.com</span></p>
+                  <p class="email">E-mail: <a href="mailto:communic.publicidade.marketing@gmail.com"><span>communic.publicidade.marketing@gmail.com</span></a></p>
                 </div>
                 <div class="social-icons">
                   <ul>
@@ -22,34 +22,7 @@
             </div>
             <div class="col-lg-6 col-sm-6 col-xs-12">
               <div class="contact-block">
-                <form id="contato" method="post" action="{% url 'index' %}">
-                {% csrf_token %}
-                  <div class="row">
-                    <div class="col-md-12">
-                      <div class="form-group">
-                        <input type="text" class="form-control" autocomplete="off" id="nome" name="nome" placeholder="nome" required data-error="Por Favor informe seu nome corretamente">
-                        <div class="help-block with-errors"></div>
-                      </div>
-                    </div>
-                    <div class="col-md-12">
-                      <div class="form-group">
-                        <input type="text" placeholder="Email" id="email" autocomplete="off" class="form-control" name="email" required data-error="Por Favor insira seu Email">
-                        <div class="help-block with-errors"></div>
-                      </div>
-                    </div>
-                    <div class="col-md-12">
-                      <div class="form-group">
-                        <textarea class="form-control" id="mensagem" autocomplete="off" name="mensagem" placeholder="Mensagem" rows="8" data-error="Escreva sua mensagem" required></textarea>
-                        <div class="help-block with-errors"></div>
-                      </div>
-                      <div class="submit-button text-center">
-                        <button class="btn btn-common" id="submit" type="submit">Enviar mensagem</button>
-                        <div id="msgSubmit" class="h3 text-center hidden"></div>
-                       <div class="clearfix"></div>
-                      </div>
-                    </div>
-                  </div>
-                </form>
+                
               </div>
             </div>
           </div>
