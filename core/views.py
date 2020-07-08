@@ -1,4 +1,4 @@
-from django.views.generic import FormView, TemplateView
+from django.views.generic import TemplateView
 from django.urls import reverse_lazy
 from .models import Features, Services, Publicacoes, Funcionario, Clientes, Counter
 from django.contrib import messages
