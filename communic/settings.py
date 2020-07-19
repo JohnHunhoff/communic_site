@@ -81,7 +81,7 @@ WSGI_APPLICATION = 'communic.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'django_communic',
         'USER': 'john',
         'PASSWORD': '1500',
